@@ -12,6 +12,11 @@ export default function Footer() {
         </span>
       </div>
       <div className="border-t border-gray-100 py-3 text-center">
+        <p className="mb-2 text-xs text-gray-400">
+          Disclaimer: This is an independent initiative and is not an official
+          portal of MANIT. For emergencies or immediate danger, please contact
+          the appropriate authorities directly.
+        </p>
         <span className="font-credit text-xs text-gray-400">
           Designed and Developed by{" "}
           <a
