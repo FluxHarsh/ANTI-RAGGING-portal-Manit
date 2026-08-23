@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --brand: #4169f0;
+  --brand-dark: #3355e0;
+}
+
+body {
+  background: #f7f7f8;
+  color: #111827;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  /* Prevent text inflation on mobile */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.font-heading {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+.font-accent {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+}
+
+* {
+  scroll-behavior: smooth;
+  /* Consistent box sizing */
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Consistent, visible focus states for keyboard/accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #4169f0;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth default transitions on interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+  transition: all 150ms ease;
+}
+
+/* Better tap targets on mobile — prevent double-tap zoom on buttons/links */
+button,
+a,
+select {
+  touch-action: manipulation;
+}
+
+/* Minimum tap target size (accessibility) */
+button:not([class*="h-"]):not([class*="w-"]) {
+  min-height: 44px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translate(-50%, 8px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+.animate-toast-in {
+  animation: toast-in 0.2s ease-out;
+}
